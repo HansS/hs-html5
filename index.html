@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>Html 5 Website</title>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+
+  <link rel="stylesheet" href="styles/hs-chart.css"/>
+
+  <script src="styles/jquery/dist/jquery.min.js"></script>
+  <script src="styles/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- endbuild -->
 </head>
-<body>
-<h3>Html 5 Standards Web Coding</h3>
-<p>Published from Github</p>
+<body ng-app="App">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="container">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a ng-href="#">Home</a></li>
+      <li><a ng-href="#/sales">Chart</a></li>
+    </ul>
+    <h3 class="text-muted">app</h3>
+  </div>
+
+  <div ng-view=""></div>
+
+  <div class="footer">
+    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  </div>
+</div>
+
+
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="styles/d3/d3.js"></script>
+<script src="styles/angular/angular.min.js"></script>
+<script src="styles/angular-route/angular-route.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/hs-chart.js"></script>
+<script src="scripts/sales.js"></script>
+<!-- endbuild -->
 </body>
 </html>
